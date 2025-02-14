@@ -1,0 +1,8 @@
+streamlit
+google-generativeai
+PyMuPDF
+pymupdf
+flask
+spacy
+pandas
+python-dotenv

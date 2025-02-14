@@ -1,0 +1,87 @@
+.education-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-left: 4px solid #3498db;
+}
+
+.institution {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.company-dates {
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 8px;
+}
+
+.project-title {
+    font-size: 1.1em;
+    color: #27ae60;
+    margin-bottom: 5px;
+}
+
+.project-description {
+    color: #7f8c8d;
+    margin-bottom: 8px;
+}
+
+.project-bullets {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.project-bullets li:before {
+    content: "▹";
+    margin-right: 8px;
+    color: #3498db;
+}
+
+pre {
+    white-space: pre-wrap;
+    font-family: inherit;
+    line-height: 1.5;
+}
+
+.upload-box {
+    border: 2px dashed #3498db;
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.upload-box:hover {
+    background: #f8f9fa;
+}
+
+.upload-box input[type="file"] {
+    display: none;
+}
+
+.upload-text {
+    color: #666;
+}
+
+.upload-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+button[type="submit"] {
+    background: #3498db;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: #2980b9;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .section { margin-bottom: 30px; padding: 20px; background: #f9f9f9; border-radius: 8px; }
+        h2 { color: #2c3e50; border-bottom: 2px solid #3498db; }
+        ul { list-style-type: none; padding-left: 20px; }
+        li { margin-bottom: 8px; padding-left: 15px; position: relative; }
+        li:before { content: "▹"; position: absolute; left: 0; color: #3498db; }
+        .improvement { color: #e74c3c; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Resume Analysis Results</h1>
+
+    <!-- Personal Information -->
+    <div class="section">
+        <h2>Personal Information</h2>
+        <p><strong>Name:</strong> {{ results.name }}</p>
+        <p><strong>Email:</strong> {{ results.email }}</p>
+        <p><strong>Phone:</strong> {{ results.phone }}</p>
+        <p><strong>Location:</strong> {{ results.location }}</p>
+    </div>
+
+    <!-- Education -->
+    <div class="section">
+        <h2>Education</h2>
+        <ul>
+            {% for edu in results.education %}
+            <li>
+                <strong>{{ edu.university }}</strong><br>
+                {{ edu.degree }} ({{ edu.cgpa }})<br>
+                {{ edu.location }}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Experience -->
+    <div class="section">
+        <h2>Experience</h2>
+        <ul>
+            {% for exp in results.experience %}
+            <li>
+                <strong>{{ exp.company }}</strong><br>
+                {{ exp.role }} ({{ exp.duration }})<br>
+                <ul>
+                    {% for contribution in exp.contributions %}
+                    <li>{{ contribution }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Projects -->
+    <div class="section">
+        <h2>Projects</h2>
+        <ul>
+            {% for project in results.projects %}
+            <li>
+                <strong>{{ project.name }}</strong><br>
+                <em>Tech Stack:</em> {{ project.tech_stack }}<br>
+                {{ project.details }}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Skills -->
+    <div class="section">
+        <h2>Technical Skills</h2>
+        <ul>
+            {% for skill in results.skills %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Achievements -->
+    <div class="section">
+        <h2>Achievements</h2>
+        <ul>
+            {% for achievement in results.achievements %}
+            <li>{{ achievement }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Improvement Suggestions -->
+    <div class="section">
+        <h2>Improvement Suggestions</h2>
+        <ul>
+            {% if results.improvement_suggestions %}
+                {% for suggestion in results.improvement_suggestions %}
+                <li class="improvement">{{ suggestion }}</li>
+                {% endfor %}
+            {% else %}
+                <li>No suggestions available.</li>
+            {% endif %}
+        </ul>
+    </div>
+</body>
+</html>

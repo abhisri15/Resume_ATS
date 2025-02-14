@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Error</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8d7da;
+      color: #721c24;
+      text-align: center;
+      padding: 50px;
+    }
+    .error-container {
+      background-color: #f5c6cb;
+      padding: 20px;
+      border-radius: 8px;
+      display: inline-block;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    pre {
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 4px;
+      text-align: left;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="error-container">
+    <h1>Error Occurred</h1>
+    <p>An error was encountered while processing your request:</p>
+    <pre>{{ error }}</pre>
+    <p>Please try again or contact support if the issue persists.</p>
+  </div>
+</body>
+</html>
