@@ -4,9 +4,9 @@ import PyPDF2
 
 
 # Load pre-trained model and TF-IDF vectorizer
-svc_model = pickle.load(open('clf.pkl', 'rb'))  # Ensure these files exist in the same directory
-tfidf = pickle.load(open('tfidf.pkl', 'rb'))
-le = pickle.load(open('encoder.pkl', 'rb'))  # This should be a LabelEncoder object
+svc_model = pickle.load(open('Models/clf.pkl', 'rb'))  # Ensure these files exist in the same directory
+tfidf = pickle.load(open('Models/tfidf.pkl', 'rb'))
+le = pickle.load(open('Models/encoder.pkl', 'rb'))  # This should be a LabelEncoder object
 
 
 # Function to clean resume text
